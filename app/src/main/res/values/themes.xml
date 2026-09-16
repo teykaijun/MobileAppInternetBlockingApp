@@ -1,0 +1,4 @@
+<resources>
+    <!-- Window theme only; the UI itself is themed in Compose (ui/theme/Theme.kt). -->
+    <style name="Theme.NetBlocker" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>

@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Internet Blocker</string>
+    <string name="vpn_session_name">Internet Blocker</string>
+
+    <!-- Status card -->
+    <string name="blocking_switch">Blocking</string>
+    <string name="status_off_title">Blocking is off</string>
+    <plurals name="status_on_title">
+        <item quantity="one">Blocking %d app</item>
+        <item quantity="other">Blocking %d apps</item>
+    </plurals>
+    <string name="status_on_no_apps_title">Blocking is on</string>
+    <string name="status_on_hint">Blocked apps can\'t use Wi-Fi or mobile data. Other apps are unaffected.</string>
+    <string name="status_on_no_apps_hint">No apps are selected yet. Pick the apps that should have no internet.</string>
+    <string name="status_off_no_apps_hint">Pick the apps that should have no internet, then turn blocking on.</string>
+    <plurals name="status_off_selected_hint">
+        <item quantity="one">%d app selected. Turn blocking on to cut its internet access.</item>
+        <item quantity="other">%d apps selected. Turn blocking on to cut their internet access.</item>
+    </plurals>
+    <string name="status_starting">Starting…</string>
+    <string name="status_revoked">Blocking was turned off because another VPN app took over or the VPN permission was removed.</string>
+    <string name="status_start_failed">Blocking couldn\'t start. Try turning it on again.</string>
+
+    <!-- App list -->
+    <string name="search_hint">Search apps</string>
+    <string name="clear_search">Clear search</string>
+    <string name="filter_blocked_only">Blocked only</string>
+    <string name="filter_show_system">System apps</string>
+    <string name="loading_apps">Loading apps…</string>
+    <string name="empty_no_matches">No apps match your search or filters.</string>
+    <string name="app_system_badge">System</string>
+    <string name="app_blocked_badge">No internet</string>
+    <plurals name="app_shared_uid">
+        <item quantity="one">Blocked together with %d other package</item>
+        <item quantity="other">Blocked together with %d other packages</item>
+    </plurals>
+
+    <!-- Menu -->
+    <string name="menu_more">More options</string>
+    <string name="menu_unblock_all">Unblock all apps</string>
+    <string name="menu_always_on">Always-on VPN settings</string>
+
+    <!-- Messages -->
+    <string name="vpn_permission_denied">Blocking needs the VPN permission to work.</string>
+    <string name="vpn_not_supported">This device doesn\'t allow VPN apps.</string>
+    <string name="vpn_settings_unavailable">VPN settings aren\'t available on this device.</string>
+
+    <!-- Notification -->
+    <string name="notification_channel_name">Blocking status</string>
+    <plurals name="notification_title">
+        <item quantity="one">Blocking internet for %d app</item>
+        <item quantity="other">Blocking internet for %d apps</item>
+    </plurals>
+    <string name="notification_text">Tap to choose which apps are blocked</string>
+    <string name="notification_turn_off">Turn off</string>
+</resources>
