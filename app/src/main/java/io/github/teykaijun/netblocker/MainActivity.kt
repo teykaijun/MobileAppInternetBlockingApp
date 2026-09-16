@@ -20,6 +20,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.core.content.ContextCompat
+import androidx.core.net.toUri
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import io.github.teykaijun.netblocker.ui.BlockerScreen
 import io.github.teykaijun.netblocker.ui.MainViewModel
@@ -93,6 +94,14 @@ class MainActivity : ComponentActivity() {
                             showMessage(R.string.vpn_settings_unavailable)
                         }
                     },
+                    onOpenSupport = {
+                        // Opens in the browser, so this app still needs no INTERNET permission.
+                        try {
+                            startActivity(Intent(Intent.ACTION_VIEW, SUPPORT_URL.toUri()))
+                        } catch (e: ActivityNotFoundException) {
+                            showMessage(R.string.no_browser)
+                        }
+                    },
                 )
             }
         }
@@ -109,5 +118,9 @@ class MainActivity : ComponentActivity() {
         val granted = ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) ==
             PackageManager.PERMISSION_GRANTED
         if (!granted) launcher.launch(Manifest.permission.POST_NOTIFICATIONS)
+    }
+
+    private companion object {
+        const val SUPPORT_URL = "https://buymeacoffee.com/casunoxd"
     }
 }

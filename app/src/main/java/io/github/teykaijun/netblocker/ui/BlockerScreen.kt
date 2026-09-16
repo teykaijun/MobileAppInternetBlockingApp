@@ -64,12 +64,19 @@ fun BlockerScreen(
     onShowSystemAppsChange: (Boolean) -> Unit,
     onUnblockAll: () -> Unit,
     onOpenVpnSettings: () -> Unit,
+    onOpenSupport: () -> Unit,
 ) {
     Scaffold(
         topBar = {
             TopAppBar(
                 title = { Text(stringResource(R.string.app_name)) },
-                actions = { OverflowMenu(onUnblockAll = onUnblockAll, onOpenVpnSettings = onOpenVpnSettings) },
+                actions = {
+                    OverflowMenu(
+                        onUnblockAll = onUnblockAll,
+                        onOpenVpnSettings = onOpenVpnSettings,
+                        onOpenSupport = onOpenSupport,
+                    )
+                },
             )
         },
         snackbarHost = { SnackbarHost(snackbarHostState) },
@@ -248,7 +255,7 @@ private fun AppListItem(row: AppRow, onBlockedChange: (String, Boolean) -> Unit)
 }
 
 @Composable
-private fun OverflowMenu(onUnblockAll: () -> Unit, onOpenVpnSettings: () -> Unit) {
+private fun OverflowMenu(onUnblockAll: () -> Unit, onOpenVpnSettings: () -> Unit, onOpenSupport: () -> Unit) {
     var expanded by remember { mutableStateOf(false) }
     IconButton(onClick = { expanded = true }) {
         Icon(painterResource(R.drawable.ic_more_vert), stringResource(R.string.menu_more))
@@ -266,6 +273,14 @@ private fun OverflowMenu(onUnblockAll: () -> Unit, onOpenVpnSettings: () -> Unit
             onClick = {
                 expanded = false
                 onOpenVpnSettings()
+            },
+        )
+        HorizontalDivider()
+        DropdownMenuItem(
+            text = { Text(stringResource(R.string.menu_support)) },
+            onClick = {
+                expanded = false
+                onOpenSupport()
             },
         )
     }
@@ -301,6 +316,7 @@ private fun BlockerScreenPreview() {
             onShowSystemAppsChange = {},
             onUnblockAll = {},
             onOpenVpnSettings = {},
+            onOpenSupport = {},
         )
     }
 }

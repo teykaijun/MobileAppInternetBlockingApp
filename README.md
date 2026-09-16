@@ -123,7 +123,7 @@ generated list of changes.
 ## Support the project
 
 Internet Blocker is a free side project. If it saves you data, battery or sanity, a coffee helps keep it
-going. Thank you!
+going. You'll also find **Support development ☕** in the app's menu. Thank you!
 
 <a href="https://buymeacoffee.com/casunoxd"><img src="https://img.shields.io/badge/Buy%20me%20a%20coffee-casunoxd-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black" alt="Buy Me a Coffee"></a>
 

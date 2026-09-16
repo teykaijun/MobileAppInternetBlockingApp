@@ -39,11 +39,13 @@
     <string name="menu_more">More options</string>
     <string name="menu_unblock_all">Unblock all apps</string>
     <string name="menu_always_on">Always-on VPN settings</string>
+    <string name="menu_support">Support development ☕</string>
 
     <!-- Messages -->
     <string name="vpn_permission_denied">Blocking needs the VPN permission to work.</string>
     <string name="vpn_not_supported">This device doesn\'t allow VPN apps.</string>
     <string name="vpn_settings_unavailable">VPN settings aren\'t available on this device.</string>
+    <string name="no_browser">No browser is available to open buymeacoffee.com/casunoxd.</string>
 
     <!-- Notification -->
     <string name="notification_channel_name">Blocking status</string>
