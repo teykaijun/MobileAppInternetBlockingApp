@@ -43,8 +43,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          # The fixed intro (install steps, support link) is followed by GitHub's generated changelog.
           gh release create "$GITHUB_REF_NAME" artifacts/*.apk \
             --title "Internet Blocker $GITHUB_REF_NAME" \
-            --notes "Debug-signed APK built from ${GITHUB_SHA}.
-
-          Install with \`adb install -r <file>\`, or open the APK on the phone and allow installs from that source."
+            --notes-file .github/release-notes.md \
+            --generate-notes
